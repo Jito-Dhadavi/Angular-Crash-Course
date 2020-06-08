@@ -1,0 +1,33 @@
+<h3 class="text-center">API integration</h3>
+<div class="form-group mb-2">
+  <input
+    type="text"
+    class="form-control"
+    (keyup.enter)="createPost(title)"
+    #title
+  />
+</div>
+<ul class="list-group" *ngIf="!loading && loaded">
+  <li class="list-group-item d-flex" *ngFor="let post of posts">
+    <div class="justify-content-start text-truncate flex-grow-1">
+      {{ post.title }}
+    </div>
+    <div class="justify-content-end">
+      <button class="btn btn-default btn-sm mr-2" (click)="updatePost(post)">
+        Update
+      </button>
+      <button class="btn btn-danger btn-sm" (click)="deletePost(post)">
+        Delete
+      </button>
+    </div>
+  </li>
+</ul>
+<div class="m-5">
+  <div
+    class="spinner-border text-primary d-flex flex-column m-auto p-3"
+    role="status"
+    *ngIf="loading && !loaded"
+  >
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>

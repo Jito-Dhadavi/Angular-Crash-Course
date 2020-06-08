@@ -1,0 +1,68 @@
+<!-- <h1>Angular</h1>
+<app-courses></app-courses>
+<app-favorite
+  [is-favorite]="post.isFavorite"
+  (change)="onFavoriteChanged($event)"
+></app-favorite>
+<boostrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body">
+    <h2>Body</h2>
+    <p>Sone Content here...</p>
+  </div>
+</boostrap-panel>
+
+<div *ngIf="courses.length > 0; then courseList; else noCourses"></div>
+<ng-template #courseList>
+  List of Courses
+</ng-template>
+<ng-template #noCourses>
+  No Courses Yet
+</ng-template>
+
+<ul class="nav nav-pills">
+  <li class="p-2">
+    <button class="btn btn-primary" (click)="viewMode = 'map'">Map View</button>
+  </li>
+  <li class="p-2"><button class="btn btn-secondary" (click)="viewMode = 'list'">List View</button></li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">
+    Map View Content
+  </div>
+  <div *ngSwitchCase="'list'">
+    List View Content
+  </div>
+  <div *ngSwitchDefault>
+    Otherwise
+  </div>
+</div> -->
+<!-- <div class="mb-2">
+  <button class="btn btn-primary" (click)="loadCourse()">Load Courses</button>
+</div>
+<ul>
+  <li *ngFor="let course of coursesData; index as i; trackBy: trackCourse">
+    {{ i + 1 }} - {{ course.name }}
+  </li>
+</ul>
+<ng-template [ngIf]="courses.length > 0">
+  <div>
+    List of courses
+  </div>
+</ng-template>
+<ng-template [ngIf]="!(courses.length > 0)">
+  No courses
+</ng-template>
+
+<h3>Custom Directive</h3>
+<input type="text" [appInputFormat]="'uppercase'"  /> -->
+<!-- <h3>Template-Driven Form</h3>
+  <app-contact-form></app-contact-form> -->
+<!-- <h3>Reactive Form</h3>
+<app-signup-form></app-signup-form>
+<h2>Form Array</h2>
+<app-new-course-form></app-new-course-form> -->
+
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

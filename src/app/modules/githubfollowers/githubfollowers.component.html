@@ -1,0 +1,24 @@
+<ng-container *ngIf="!loading && loaded">
+<div class="media" *ngFor="let user of users">
+  <div class="media-left">
+    <a href="#"
+      ><img [src]="user.thumbnailUrl" alt="" class="avatar media-object"
+    /></a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <a [routerLink]="['/followers', user.id]">{{ user.title }}</a>
+    </h4>
+    <a href="#"></a>
+  </div>
+</div>
+</ng-container>
+<div class="m-5">
+    <div
+      class="spinner-border text-primary d-flex flex-column m-auto p-3"
+      role="status"
+      *ngIf="loading && !loaded"
+    >
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
